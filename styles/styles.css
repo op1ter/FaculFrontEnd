@@ -1,10 +1,41 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
     width: 100%;
     height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    font-family: "Lora", serif;
 }
+
 /* Seção Sobre Nós */
-.sobre-nos{
-    padding: 40px 20px;
-    text-align: right;
-    background: #f8f9fa;
+.container-sobre-nos {
+    display: flex;
+    padding: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.container-sobre-nos img {
+    width: 42%;
+    height: auto;
+    border-radius: 2px;
+}
+
+.texto-sobre-nos {
+    width: 50%;
+    padding-left: 40px;
+}
+
+.texto-sobre-nos h2 {
+    color: #122835;
+    font-size: 42px;
+}
+
+.texto-sobre-nos p {
+    color: #173348;
+    line-height: 1.6;
+    font-size: 26px;
+    text-align:justify;
 }
