@@ -6,7 +6,69 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
-    font-family: "Lora", serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+}
+
+/*Seção Imoveis*/
+
+.imoveis {
+    padding: 40px;
+}
+
+.imoveis h2 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.container-imoveis {
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+}
+
+.card-imoveis {
+    width: 350px;
+    height: 478px;
+    border: 1px solid #173348;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-image {
+    height: 50%;
+    background-color: #193849; /* Cor azul escura */
+}
+
+.card-content {
+    height: 50%;
+    background-color: white;
+}
+
+.ver-todos{
+
+    text-align: right;
+    padding-right: 115px;
+}
+
+.Botao-ver-todos {
+    margin-top: 25px;
+    padding: 8px 20px;
+    border: 1px solid #2c4a5c;
+    border-radius: 20px;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Botao-ver-todos:hover {
+    background-color: #2c4a5c;
+    color: white;
 }
 
 /* Seção Sobre Nós */
@@ -15,17 +77,18 @@ body {
     padding: 40px;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 .container-sobre-nos img {
-    width: 42%;
-    height: auto;
+    width: 46%;
+    height: 20%;
     border-radius: 2px;
 }
 
 .texto-sobre-nos {
-    width: 50%;
-    padding-left: 40px;
+    width: 45%;
+    padding-left: 65px;
 }
 
 .texto-sobre-nos h2 {
@@ -34,8 +97,8 @@ body {
 }
 
 .texto-sobre-nos p {
-    color: #173348;
-    line-height: 1.6;
-    font-size: 26px;
-    text-align:justify;
+    color: #122835;
+    line-height: 1.4;
+    font-size: 22px;
+    text-align: justify;
 }
