@@ -16,12 +16,18 @@ body {
     display: flex;
     justify-content: center;
     padding: 10px;
+
 }
 
 .nav ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav li{
+    margin: 0 15px;
 }
 
 .nav a:hover{
