@@ -11,6 +11,24 @@ body {
     font-weight: 300;
 }
 
+/*header*/
+.nav{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a:hover{
+    background-color: #2c4a5c;
+    animation-delay: 3;
+}
+
 /*Seção Imoveis*/
 
 .imoveis {
