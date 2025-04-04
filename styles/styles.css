@@ -150,3 +150,129 @@ nav a {
     font-size: 22px;
     text-align: justify;
 }
+
+/* parte mateus */
+.container-anuncie-seu-imovel{
+    padding-bottom: 5%;
+}
+.imagem-anuncio{
+    position: flex;
+   position: left;
+   width: 70%;
+   margin-left: 3%;
+   
+        
+}
+
+.anuncio{
+    position: relative;
+    z-index: 1;
+    width: 30%;
+    height: 30%;
+    margin-top: -25%;
+    margin-right: 3%;
+    margin-left: 60%;
+    padding: 2%;
+    border-radius: 5px;
+    background-color: #173348;
+    
+}
+.txtanuncio{
+    color: #ffffff;
+    /*font-family:*/ 
+}
+
+/* Estilo do fundo do pop-up */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica fixo na tela */
+    z-index: 1; /* Fica acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita rolagem se necessário */
+    background-color: rgb(0,0,0); /* Cor de fundo */
+    background-color: rgba(0,0,0,0.4); /* Fundo com opacidade */
+}
+
+/* Estilo do conteúdo do pop-up */
+.modal-content {
+    background-color: #558bba;
+    margin: 15% auto; /* Centraliza o pop-up */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do pop-up */
+    max-width: 500px; /* Largura máxima */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilo do botão de fechar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.openModal{
+    background-color: #173348;
+    color:#ffffff;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border-color: #ffffff;   
+}
+
+.rodape{
+    /* background-color: #173348; */
+    position: flex;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+}
+.rodape-azul{
+    display: grid;
+    text-align: center;
+    background-color: #173348;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    padding:2% ;
+}
+.coluna-rodape{
+ color:#ffffff;
+ text-decoration: none;
+
+}
+.coluna-rodape a{
+ color: #ffffff;
+ text-decoration: none;
+ 
+}
+
+.coluna-rodape2{
+    border-style:solid;
+    border-top: none;
+    border-bottom: none;
+    border-color: #ffffff;
+}
+.coluna-rodape2 a{
+    color: #ffffff;
+    text-decoration: none;
+    
+}   
+
+.coluna-rodape3{
+    text-align: center;
+}
+.rodape-branco{
+    background-color: #ffffff;
+}

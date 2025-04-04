@@ -25,7 +25,7 @@
     <main>
         <section class="banner">
             <div class="container-banner">
-                    <img src="Images/banner.png" alt="">
+                <img src="Images/banner.png" alt="">
             </div>
         </section>
 
@@ -55,7 +55,7 @@
                 <img src="Images/sobre-nos.jpg" alt="Imagem de pessoas em reunião">
                 <div class="texto-sobre-nos">
                     <h2>Sobre nós</h2>
-                    <p>Bem-vindo à Habita, sua parceira na busca pelo lar ideal.    Somos uma imobiliária moderna e
+                    <p>Bem-vindo à Habita, sua parceira na busca pelo lar ideal. Somos uma imobiliária moderna e
                         inovadora,
                         comprometida em oferecer soluções personalizadas e eficientes para compra e venda de imóveis.
                         Nossa missão é transformar seus sonhos em realidade, com confiança e profissionalismo.</p>
@@ -64,12 +64,65 @@
         </section>
 
         <section id="anuncie" class="anuncie">
+            <div class="container-anuncie-seu-imovel">
+                <div>
+                    <img class="imagem-anuncio" src="Images/predAnunciocut.JPG">
+                </div>
 
+                <div class="anuncio">
+                    <h2>Anuncie seu imóvel </h2>
+                    <p class="txtanuncio">
+                        Queremos transformar o momento da venda ou locação do seu imóvel em um momento prazeroso, menos
+                        burocrático e com acompanhamento do início ao fim.
+
+                    </p><br>
+
+                    <!-- POP UP COMEÇA AQUI-->
+                    <button id="openModal" class="openModal">Saiba Mais ></button>
+                </div>
+            </div>
+            <div id="myModal" class="modal" role="dialog" aria-labelledby="modalTitle"
+                aria-describedby="modalDescription">
+                <div class="modal-content">
+                    <span class="close" aria-label="Fechar">&times;</span>
+                    <h2 id="modalTitle">Anuncie seu imóvel</h2>
+                    <form id="contactForm">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required><br><br>
+                        <label for="tel">Telefone:</label>
+                        <input type="tel" id="tel" name="tel" required><br><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <!-- POP UP TERMINA -->
+
+            <script src="script.js"></script> <!-- Link para o JavaScript -->
         </section>
     </main>
 
-    <footer>
+    <footer class="rodape">
+        <div class="rodape-azul">
+            <div class="coluna-rodape">
+                <p> Habita Imóveis</p>
 
+                <p>R. Itajubá, 673 - Portão, Curitiba</p>
+            </div>
+            <div class="coluna-rodape2">
+                <p><a href="#imoveis"> Encontre seu imóvel</a></p>
+                <p><a href="#anuncie">Anuncie seu imóvel</a></p>
+                <p><a href="#sobre-nos">Sobre nós</a></p>
+                <p><a href="">Contato</a></p>
+            </div>
+            <div class="coluna-rodape3">
+                <p> Venda <br> Telefone:(41) 91234-4321<br>E-mail: venda@habita.com.br</p>
+
+                <p>Compra<br>
+                    Telefone: (41) 91234-4321<br>
+                    E-mail: compra@habita.com.br</p>
+            </div>
     </footer>
 </body>
 
