@@ -23,3 +23,9 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+function mostrarMensagem(event) {
+    event.preventDefault(); // Impede o envio do formulário
+    alert("Formulário enviado com sucesso!");
+    modal.style.display = "none";
+}

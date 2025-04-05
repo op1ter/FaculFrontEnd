@@ -175,6 +175,7 @@ nav a {
     padding: 2%;
     border-radius: 5px;
     background-color: #173348;
+    color: #ffffff;
     
 }
 .txtanuncio{
@@ -198,13 +199,62 @@ nav a {
 
 /* Estilo do conteúdo do pop-up */
 .modal-content {
-    background-color: #558bba;
+    background-color: #ffffff;
     margin: 15% auto; /* Centraliza o pop-up */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Largura do pop-up */
     max-width: 500px; /* Largura máxima */
     border-radius: 5px; /* Bordas arredondadas */
+    text-align: center;
+    align-content: center ;
+}
+
+.modal-title {
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    max-width: 350px;
+    padding: 2%;
+}
+
+.single-input {
+    position: relative;
+    margin: 30px 0;
+}
+
+.single-input label {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    color: rgb(150, 150, 150);
+    cursor: text;
+    transition: 0.5s ease-in-out;
+}
+
+.input {
+    width: 100%;
+    padding: 5px;
+    border: 0;
+    border-bottom: 2px solid rgb(200, 200, 200);
+    outline: 0;
+    font-size: 16px;
+    color: rgb(80, 80, 80);
+    transition: 0.5s ease-in-out;
+}
+
+.input:focus,
+.input:valid {
+    border-bottom: 2px solid cornflowerblue;
+}
+
+.input:focus~label,
+.input:valid~label {
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: cornflowerblue;
 }
 
 /* Estilo do botão de fechar */
@@ -222,13 +272,22 @@ nav a {
     cursor: pointer;
 }
 
-.openModal{
+.saiba-mais{
     background-color: #173348;
     color:#ffffff;
     width: 100px;
     height: 40px;
     border-radius: 20px;
     border-color: #ffffff;   
+}
+
+.botao-enviar {
+    margin: 2% auto;
+    background-color: #173348;
+    color: #ffffff;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
 }
 
 .rodape{
@@ -239,6 +298,7 @@ nav a {
     margin-top: 10%;
     text-align: center;
 }
+
 .rodape-azul{
     display: grid;
     text-align: center;
@@ -272,7 +332,5 @@ nav a {
 
 .coluna-rodape3{
     text-align: center;
-}
-.rodape-branco{
-    background-color: #ffffff;
+    color: #ffffff;
 }
