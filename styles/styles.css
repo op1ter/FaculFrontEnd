@@ -89,7 +89,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     font-style: italic;
-    font-size: 36px;
+    font-size: 2.1rem;
     margin-bottom: 20px;
 }
 
@@ -97,7 +97,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 75px;
-    margin-bottom: 4rem;
 }
 
 .card-imoveis {
@@ -116,6 +115,27 @@ body {
 .card-content {
     height: 50%;
     background-color: white;
+}
+
+.ver-todos {
+
+    text-align: right;
+    padding-right: 115px;
+}
+
+.Botao-ver-todos {
+    margin-top: 25px;
+    padding: 8px 20px;
+    border: 1px solid #2c4a5c;
+    border-radius: 20px;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Botao-ver-todos:hover {
+    background-color: #2c4a5c;
+    color: white;
 }
 
 
@@ -140,13 +160,13 @@ body {
 
 .texto-sobre-nos h2 {
     color: #122835;
-    font-size: 42px;
+    font-size: 2.8rem;
 }
 
 .texto-sobre-nos p {
     color: #122835;
     line-height: 1.4;
-    font-size: 22px;
+    font-size: 1.2rem;
     text-align: justify;
 }
 
@@ -186,7 +206,7 @@ body {
 }
 
 .card-anuncio p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 1.5rem;
 }
