@@ -227,6 +227,119 @@ body {
     color: #0d2d3e;
 }
 
+/* ---------- Estilos Gerais ---------- */
+.modal {
+    display: none;
+    /* Inicialmente oculto */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fundo escuro semi-transparente */
+    backdrop-filter: blur(2px);
+}
+
+/* ---------- Conteúdo do Modal ---------- */
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ---------- Botão de Fechar ---------- */
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.close:hover {
+    color: #e63946;
+}
+
+/* ---------- Inputs ---------- */
+.single-input {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.single-input label {
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.single-input .input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.single-input .input:focus {
+    outline: none;
+    border-color: #0077cc;
+}
+
+/* ---------- Botão Enviar ---------- */
+.botao-enviar {
+    padding: 0.75rem 1.5rem;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-enviar:hover {
+    background-color: #005fa3;
+}
+
+/* ---------- Acessibilidade: esconder textos visuais ---------- */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ---------- Animação ---------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .rodape {
     bottom: 0;
     width: 100%;

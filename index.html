@@ -9,6 +9,8 @@
     <title>Habita Imóveis</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="Images/favicon/favicon.ico">
+    <script src="Javascript/script.js"></script>
+
 </head>
 
 <body>
@@ -92,7 +94,44 @@
                     Saiba Mais &gt;
                 </button>
             </div>
+
+            <div id="myModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+                <div class="modal-content" role="document">
+                    
+                    <!-- Botão de fechar -->
+                    <button type="button" class="close" aria-label="Fechar modal">&times;</button>
+            
+                    <!-- Título do modal -->
+                    <h2 id="modalTitle" class="modal-title">Anuncie seu imóvel</h2>
+            
+                    <!-- Formulário -->
+                    <form id="contactForm" onsubmit="mostrarMensagem(event)" aria-describedby="modalDescription">
+                        <p id="modalDescription" class="sr-only">
+                            Preencha seus dados para que possamos entrar em contato sobre o anúncio do seu imóvel.
+                        </p>
+            
+                        <div class="single-input">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="input" id="nome" name="nome" required />
+                        </div>
+            
+                        <div class="single-input">
+                            <label for="email">Email</label>
+                            <input type="email" class="input" id="email" name="email" required />
+                        </div>
+            
+                        <div class="single-input">
+                            <label for="tel">Telefone</label>
+                            <input type="tel" class="input" id="tel" name="tel" required />
+                        </div>
+            
+                        <button type="submit" class="botao-enviar">Enviar</button>
+                    </form>
+                </div>
+            </div>
         </section>
+
+
 
         <!--
             <div id="myModal" class="modal" role="dialog" aria-labelledby="modalTitle"
@@ -126,7 +165,7 @@
             </div>
             POP UP TERMINA
 
-            <script src="Javascript/script.js"></script> Link para o JavaScript
+             Link para o JavaScript
         </section> -->
 
 
