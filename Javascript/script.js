@@ -1,35 +1,3 @@
-// // Obtém o modal
-// var modal = document.getElementById("myModal");
-
-// // Obtém o botão que abre o modal
-// var btn = document.getElementById("openModal");
-
-// // Obtém o elemento <span> que fecha o modal
-// var span = document.getElementsByClassName("close")[0];
-
-// // Quando o usuário clica no botão, abre o modal
-// btn.onclick = function() {
-//     modal.style.display = "block";
-// }
-
-// // Quando o usuário clica no <span> (x), fecha o modal
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
-
-// // Quando o usuário clica em qualquer lugar fora do modal, fecha o modal
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
-
-// function mostrarMensagem(event) {
-//     event.preventDefault(); // Impede o envio do formulário
-//     alert("Formulário enviado com sucesso!");
-//     modal.style.display = "none";
-// }
-
 document.addEventListener("DOMContentLoaded", function () {
     let modal = document.getElementById("myModal");
     let openButton = document.getElementById("openModal");
@@ -44,9 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleFormSubmit(event) {
-        event.preventDefault();
-        alert("Formulário enviado com sucesso!");
-        closeModal();
+        event.preventDefault(); // impede o recarregamento da página
+        alert("Formulário enviado com sucesso! Entraremos em contato em breve.");
+        event.target.reset(); // limpa os campos do formulário
+        closeModal(); // fecha o modal
     }
 
     if (modal && openButton && closeButton) {
@@ -60,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    const form = document.getElementById("contactForm");
+    const form = document.getElementById("propertyForm");
     if (form) {
         form.addEventListener("submit", handleFormSubmit);
     }

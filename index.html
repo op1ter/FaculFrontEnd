@@ -22,7 +22,7 @@
                 <li><a href="#imoveis">Encontre seu imóvel</a></li>
                 <li><a href="#anuncie">Anuncie seu imóvel</a></li>
                 <li><a href="#sobre-nos">Sobre nós</a></li>
-                <li><button class="botao-contato">Contato</button></li>
+                <li><a href="#rodape" class="botao-contato">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div class="ver-todos">
-                <button class="Botao-ver-todos" type="button">Ver todos ></button>
+                <button class="botao-ver-todos" type="button">Ver todos ></button>
             </div>
         </section>
 
@@ -95,83 +95,86 @@
                 </button>
             </div>
 
-            <div id="myModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription">
-                <div class="modal-content" role="document">
-                    
-                    <!-- Botão de fechar -->
-                    <button type="button" class="close" aria-label="Fechar modal">&times;</button>
-            
-                    <!-- Título do modal -->
-                    <h2 id="modalTitle" class="modal-title">Anuncie seu imóvel</h2>
-            
-                    <!-- Formulário -->
-                    <form id="contactForm" onsubmit="mostrarMensagem(event)" aria-describedby="modalDescription">
-                        <p id="modalDescription" class="sr-only">
-                            Preencha seus dados para que possamos entrar em contato sobre o anúncio do seu imóvel.
-                        </p>
-            
-                        <div class="single-input">
-                            <label for="nome">Nome</label>
-                            <input type="text" class="input" id="nome" name="nome" required />
-                        </div>
-            
-                        <div class="single-input">
-                            <label for="email">Email</label>
-                            <input type="email" class="input" id="email" name="email" required />
-                        </div>
-            
-                        <div class="single-input">
-                            <label for="tel">Telefone</label>
-                            <input type="tel" class="input" id="tel" name="tel" required />
-                        </div>
-            
-                        <button type="submit" class="botao-enviar">Enviar</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!--
             <div id="myModal" class="modal" role="dialog" aria-labelledby="modalTitle"
                 aria-describedby="modalDescription">
                 <div class="modal-content">
                     <span class="close" aria-label="Fechar">&times;</span>
-                    <h2 id="modalTitle" class="modal-title">Anuncie seu imóvel</h2>
+                    <h2 id="modalTitle" class="modal-title">Cadastre seu imóvel</h2>
 
-                    <form id="contactForm" onsubmit="mostrarMensagem(event)">
+                    <form id="propertyForm">
+                        <fieldset>
+                            <legend>Dados do Imóvel</legend>
 
-                        <div class="single-input">
-                            <input type="text" class="input" id="nome" required>
-                            <label for="nome">Nome</label>
-                        </div>
+                            <div class="single-input">
+                                <label for="tipo">Tipo do imóvel</label>
+                                <select id="tipo" required>
+                                    <option value="">Selecione</option>
+                                    <option value="Casa">Casa</option>
+                                    <option value="Apartamento">Apartamento</option>
+                                </select>
+                            </div>
 
-                        <div class="single-input">
-                            <input type="email" class="input" id="email" required>
-                            <label for="email">Email</label>
-                        </div>
+                            <div class="single-input">
+                                <label for="finalidade">Finalidade</label>
+                                <select id="finalidade" required>
+                                    <option value="">Selecione</option>
+                                    <option value="Venda">Venda</option>
+                                    <option value="Locação">Locação</option>
+                                </select>
+                            </div>
 
-                        <div class="single-input">
-                            <input type="tel" class="input" id="tel" required>
-                            <label for="tel">Telefone</label>
-                        </div>
+                            <div class="single-input">
+                                <label for="cep">CEP</label>
+                                <input type="text" id="cep" placeholder="00000-000" required>
+                            </div>
+
+                            <div class="single-input">
+                                <label for="endereco">Endereço</label>
+                                <input type="text" id="endereco" placeholder="Ex: Rua Amaral, 512" required>
+                            </div>
+
+                            <div class="single-input">
+                                <label for="bairro">Bairro</label>
+                                <input type="text" id="bairro" placeholder="Ex: Centro" required>
+                            </div>
+
+                            <div class="single-input">
+                                <label for="descricao">Descrição</label>
+                                <textarea id="descricao" rows="4"
+                                    placeholder="Ex: 3 quartos, 2 banheiros, quintal amplo..." required></textarea>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Seus Dados</legend>
+
+                            <div class="single-input">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" placeholder="Ex: Almir José" required>
+                            </div>
+
+                            <div class="single-input">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" placeholder="Ex: (41) 00000-0000" required>
+                            </div>
+
+                            <div class="single-input">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Ex: SeuEmail@email.com" required>
+                            </div>
+                        </fieldset>
 
                         <button type="submit" class="botao-enviar">Enviar</button>
-
                     </form>
-
                 </div>
             </div>
-            POP UP TERMINA
 
-             Link para o JavaScript
-        </section> -->
+        </section>
 
 
     </main>
 
-    <footer class="rodape">
+    <footer id="rodape" class="rodape">
         <div class="rodape-azul">
             <div class="coluna-rodape">
                 <p><strong>Habita Imóveis</strong></p>
@@ -182,7 +185,7 @@
                 <p><a href="#imoveis">Encontre seu imóvel</a></p>
                 <p><a href="#anuncie">Anuncie seu imóvel</a></p>
                 <p><a href="#sobre-nos">Sobre nós</a></p>
-                <p><a href="#">Contato</a></p>
+                <p><a href="#rodape">Contato</a></p>
             </div>
             <div class="coluna-rodape3">
                 <p>Venda <br> Telefone: (41) 91234-4321<br>E-mail: venda@habita.com.br</p>
