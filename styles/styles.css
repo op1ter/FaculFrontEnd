@@ -8,7 +8,6 @@ body {
     padding: 0;
     background-color: #f9f9f9;
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 300;
 }
 
@@ -18,7 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 75px;
+    padding: 10px 55px;
 }
 
 .logo {
@@ -37,7 +36,7 @@ body {
 .navegacao a {
     text-decoration: none;
     color: #0d2c3f;
-    font-size: 16px;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
@@ -45,9 +44,9 @@ body {
     color: #173348;
 }
 
-/* Botão de contato */
+/* Botão de contato header*/
 .botao-contato {
-    background-color: #122835;
+    background-color: #173348;
     color: #ffffff;
     padding: 8px 16px;
     border: none;
@@ -63,7 +62,7 @@ body {
 
 /* Banner */
 .banner {
-    margin: 0%;
+    margin: 3%;
     padding: 0%;
     align-items: center;
 }
@@ -111,7 +110,6 @@ body {
 .card-image {
     height: 50%;
     background-color: #193849;
-    /* Cor azul escura */
 }
 
 .card-content {
@@ -143,7 +141,7 @@ body {
 /* Seção Sobre Nós */
 .container-sobre-nos {
     display: flex;
-    padding: 40px;
+    padding-bottom: 4rem;
     margin: 0;
     align-items: center;
 }
@@ -171,165 +169,67 @@ body {
     text-align: justify;
 }
 
-/* parte mateus */
-.container-anuncie-seu-imovel {
-    padding-bottom: 5%;
-}
+/* Anuncie imovel */
 
-.imagem-anuncio {
-    position: flex;
-    position: left;
-    width: 70%;
-    margin-left: 3%;
-
-
-}
-
-.anuncio {
+.anuncio-destaque {
     position: relative;
-    z-index: 1;
-    width: 30%;
-    height: 30%;
-    margin-top: -25%;
-    margin-right: 3%;
-    margin-left: 60%;
-    padding: 2%;
-    border-radius: 5px;
-    background-color: #173348;
-    color: #ffffff;
-
-}
-
-.txtanuncio {
-    color: #ffffff;
-    /*font-family:*/
-}
-
-/* Estilo do fundo do pop-up */
-.modal {
-    display: none;
-    /* Escondido por padrão */
-    position: fixed;
-    /* Fica fixo na tela */
-    z-index: 1;
-    /* Fica acima de outros elementos */
-    left: 0;
-    top: 0;
     width: 100%;
-    /* Largura total */
-    height: 100%;
-    /* Altura total */
-    overflow: auto;
-    /* Habilita rolagem se necessário */
-    background-color: rgb(0, 0, 0);
-    /* Cor de fundo */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Fundo com opacidade */
+    max-width: 1150px;
+    margin: auto;
+    overflow: hidden;
 }
 
-/* Estilo do conteúdo do pop-up */
-.modal-content {
-    background-color: #ffffff;
-    margin: 15% auto;
-    /* Centraliza o pop-up */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    /* Largura do pop-up */
-    max-width: 500px;
-    /* Largura máxima */
-    border-radius: 5px;
-    /* Bordas arredondadas */
-    text-align: center;
-    align-content: center;
-}
-
-.modal-title {
-    text-align: center;
-}
-
-form {
+.imagem-fundo {
     width: 100%;
-    max-width: 350px;
-    padding: 2%;
+    display: block;
+    height: auto;
 }
 
-.single-input {
-    position: relative;
-    margin: 30px 0;
-}
-
-.single-input label {
+.card-anuncio {
     position: absolute;
-    bottom: 5px;
-    left: 0;
-    color: rgb(150, 150, 150);
-    cursor: text;
-    transition: 0.5s ease-in-out;
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%);
+    background-color: #173348;
+    color: #ffffff;
+    padding: 2rem;
+    max-width: 450px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 }
 
-.input {
-    width: 100%;
-    padding: 5px;
-    border: 0;
-    border-bottom: 2px solid rgb(200, 200, 200);
-    outline: 0;
-    font-size: 16px;
-    color: rgb(80, 80, 80);
-    transition: 0.5s ease-in-out;
+.card-anuncio h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-.input:focus,
-.input:valid {
-    border-bottom: 2px solid cornflowerblue;
+.card-anuncio p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
 }
 
-.input:focus~label,
-.input:valid~label {
-    transform: translateY(-24px);
-    font-size: 12px;
-    color: cornflowerblue;
-}
-
-/* Estilo do botão de fechar */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+.btn-saiba-mais {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 0.4rem 1.2rem;
+    border-radius: 25px;
     cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
-.saiba-mais {
-    background-color: #173348;
-    color: #ffffff;
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-    border-color: #ffffff;
-}
-
-.botao-enviar {
-    margin: 2% auto;
-    background-color: #173348;
-    color: #ffffff;
-    border-radius: 20px;
-    width: 100px;
-    height: 40px;
+.btn-saiba-mais:hover {
+    background-color: white;
+    color: #0d2d3e;
 }
 
 .rodape {
-    /* background-color: #173348; */
-    position: flex;
     bottom: 0;
     width: 100%;
-    margin-top: 10%;
+    margin-top: 5%;
     text-align: center;
 }
 
@@ -370,4 +270,8 @@ form {
 .coluna-rodape3 {
     text-align: center;
     color: #ffffff;
+}
+
+.footer-social {
+    margin-top: 1%;
 }

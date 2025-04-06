@@ -12,16 +12,6 @@
 </head>
 
 <body>
-    <!-- <header>
-        <div class="logo">HABITA</div>
-        <nav>
-            <ul>
-                <li><a href="#imoveis">Encontre seu imóvel</a></li>
-                <li><a href="#anuncie">Anuncie seu imóvel</a></li>
-                <li><a href="#sobre-nos">Sobre nós</a></li>
-                <button type="button">Contato</button>
-            </ul>
-        </nav> -->
 
     <header class="menu-principal">
         <div class="logo">HABITA</div>
@@ -77,7 +67,7 @@
 
         <section id="sobre-nos" class="sobre-nos">
             <div class="container-sobre-nos">
-                <img src="Images/sobre-nos.jpg" alt="Imagem de pessoas em reunião">
+                <img src="Images/Sobrenos.jpg" alt="Imagem de pessoas em reunião">
                 <div class="texto-sobre-nos">
                     <h2>Sobre nós</h2>
                     <p>Bem-vindo à Habita, sua parceira na busca pelo lar ideal. Somos uma imobiliária moderna e
@@ -88,22 +78,38 @@
             </div>
         </section>
 
-        <section id="anuncie" class="anuncie">
+        <section id="anuncie" class="anuncio-destaque">
+            <img src="Images/InteriorApartamento.JPG" alt="Sala com sofá e mesa de centro" class="imagem-fundo">
+
+            <div class="card-anuncio">
+                <h2>Anuncie seu imóvel</h2>
+                <p>
+                    Queremos transformar o momento da venda ou locação do seu imóvel em um momento prazeroso,
+                    menos burocrático e com acompanhamento do início ao fim.
+                </p>
+                <button id="openModal" class="btn-saiba-mais"
+                    aria-label="Abrir mais informações sobre anúncio de imóvel">
+                    Saiba Mais &gt;
+                </button>
+            </div>
+        </section>
+
+        <!-- <section id="anuncie" class="anuncie">
             <div class="container-anuncie-seu-imovel">
                 <div>
-                    <img class="imagem-anuncio" src="Images/predAnunciocut.JPG">
+                    <img src="Images/InteriorApartamento.JPG" alt="Imagem ilustrativa de imóvel" class="imagem-anuncio">
                 </div>
-
                 <div class="anuncio">
                     <h2>Anuncie seu imóvel </h2>
                     <p class="txtanuncio">
                         Queremos transformar o momento da venda ou locação do seu imóvel em um momento prazeroso, menos
                         burocrático e com acompanhamento do início ao fim.
-
-                    </p><br>
-
-                    <!-- POP UP COMEÇA AQUI-->
-                    <button id="openModal" class="saiba-mais">Saiba Mais ></button>
+                    </p>
+                    POP UP COMEÇA AQUI
+                    <button id="openModal" class="saiba-mais"
+                        aria-label="Abrir mais informações sobre anúncio de imóvel">
+                        Saiba Mais &gt;
+                    </button>
                 </div>
             </div>
             <div id="myModal" class="modal" role="dialog" aria-labelledby="modalTitle"
@@ -135,17 +141,20 @@
 
                 </div>
             </div>
-            <!-- POP UP TERMINA -->
+            POP UP TERMINA
 
-            <script src="script.js"></script> <!-- Link para o JavaScript -->
-        </section>
+            <script src="Javascript/script.js"></script> Link para o JavaScript
+        </section> -->
+
+
     </main>
 
     <footer class="rodape">
         <div class="rodape-azul">
             <div class="coluna-rodape">
-                <p>Habita Imóveis</p>
-                <p>R. Itajubá, 673 - Portão, Curitiba</p>
+                <p><strong>Habita Imóveis</strong></p>
+                <p>Rua Tenente-Coronel Cardoso 114 - Centro, Curitiba/PR</p>
+                <p>Rua Domingos Olímpio - Centro, Pinhais/PR</p>
             </div>
             <div class="coluna-rodape2">
                 <p><a href="#imoveis">Encontre seu imóvel</a></p>
@@ -157,6 +166,12 @@
                 <p>Venda <br> Telefone: (41) 91234-4321<br>E-mail: venda@habita.com.br</p>
                 <p>Compra<br>Telefone: (41) 91234-4321<br>E-mail: compra@habita.com.br</p>
             </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="#"><img src="Images/favicon/instagramicon.png" alt="Instagram"></a>
+            <a href="#"><img src="Images/favicon/whatsappicon.png" alt="WhatsApp"></a>
+            <a href="#"><img src="Images/favicon/linkedinicon.png" alt="LinkedIn"></a>
         </div>
     </footer>
 </body>
