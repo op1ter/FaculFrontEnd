@@ -4,20 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="description"
+        content="Habita Imóveis: encontre ou anuncie seu imóvel com agilidade, transparência e confiança.">
     <title>Habita Imóveis</title>
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="Images/favicon/favicon.ico">
 </head>
 
 <body>
-    <header>
+    <!-- <header>
+        <div class="logo">HABITA</div>
         <nav>
             <ul>
-                <a href="#"></a>
                 <li><a href="#imoveis">Encontre seu imóvel</a></li>
                 <li><a href="#anuncie">Anuncie seu imóvel</a></li>
                 <li><a href="#sobre-nos">Sobre nós</a></li>
                 <button type="button">Contato</button>
+            </ul>
+        </nav> -->
+
+    <header class="menu-principal">
+        <div class="logo">HABITA</div>
+        <nav class="navegacao">
+            <ul>
+                <li><a href="#imoveis">Encontre seu imóvel</a></li>
+                <li><a href="#anuncie">Anuncie seu imóvel</a></li>
+                <li><a href="#sobre-nos">Sobre nós</a></li>
+                <li><button class="botao-contato">Contato</button></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +38,7 @@
     <main>
         <section class="banner">
             <div class="container-banner">
-                <img src="Images/banner.png" alt="">
+                <img src="Images/Banner.png" alt="Banner de imóveis em destaque">
             </div>
         </section>
 
@@ -33,20 +46,32 @@
             <h2>Imóveis à venda</h2>
             <div class="container-imoveis">
                 <div class="card-imoveis">
-                    <div class="card-image"></div>
-                    <div class="card-content"></div>
+                    <div class="card-image">
+                        <img src="Images/imovel1.jpg" alt="Casa com 3 quartos e garagem" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <p>Casa à venda - R$ 350.000</p>
+                    </div>
                 </div>
                 <div class="card-imoveis">
-                    <div class="card-image"></div>
-                    <div class="card-content"></div>
+                    <div class="card-image">
+                        <img src="Images/imovel2.jpg" alt="Apartamento moderno com varanda" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <p>Apartamento à venda - R$ 420.000</p>
+                    </div>
                 </div>
                 <div class="card-imoveis">
-                    <div class="card-image"></div>
-                    <div class="card-content"></div>
+                    <div class="card-image">
+                        <img src="Images/imovel3.jpg" alt="Sobrado com área gourmet" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <p>Sobrado à venda - R$ 550.000</p>
+                    </div>
                 </div>
             </div>
             <div class="ver-todos">
-                <button class="Botao-ver-todos">Ver todos ></button>
+                <button class="Botao-ver-todos" type="button">Ver todos ></button>
             </div>
         </section>
 
@@ -93,21 +118,21 @@
                             <input type="text" class="input" id="nome" required>
                             <label for="nome">Nome</label>
                         </div>
-    
+
                         <div class="single-input">
                             <input type="email" class="input" id="email" required>
                             <label for="email">Email</label>
                         </div>
-    
+
                         <div class="single-input">
                             <input type="tel" class="input" id="tel" required>
                             <label for="tel">Telefone</label>
                         </div>
-    
+
                         <button type="submit" class="botao-enviar">Enviar</button>
-    
+
                     </form>
-                
+
                 </div>
             </div>
             <!-- POP UP TERMINA -->
@@ -119,22 +144,18 @@
     <footer class="rodape">
         <div class="rodape-azul">
             <div class="coluna-rodape">
-                <p> Habita Imóveis</p>
-
+                <p>Habita Imóveis</p>
                 <p>R. Itajubá, 673 - Portão, Curitiba</p>
             </div>
             <div class="coluna-rodape2">
-                <p><a href="#imoveis"> Encontre seu imóvel</a></p>
+                <p><a href="#imoveis">Encontre seu imóvel</a></p>
                 <p><a href="#anuncie">Anuncie seu imóvel</a></p>
                 <p><a href="#sobre-nos">Sobre nós</a></p>
-                <p><a href="">Contato</a></p>
+                <p><a href="#">Contato</a></p>
             </div>
             <div class="coluna-rodape3">
-                <p> Venda <br> Telefone:(41) 91234-4321<br>E-mail: venda@habita.com.br</p>
-
-                <p>Compra<br>
-                    Telefone: (41) 91234-4321<br>
-                    E-mail: compra@habita.com.br</p>
+                <p>Venda <br> Telefone: (41) 91234-4321<br>E-mail: venda@habita.com.br</p>
+                <p>Compra<br>Telefone: (41) 91234-4321<br>E-mail: compra@habita.com.br</p>
             </div>
         </div>
     </footer>

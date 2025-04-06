@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-html,body {
+html,
+body {
     width: 100%;
     height: auto;
     margin: 0;
@@ -13,48 +14,67 @@ html,body {
 
 /*header*/
 
-nav{
+.menu-principal {
     display: flex;
-    padding-left: 0%;
-    margin-bottom: 1%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 75px;
 }
 
-nav ul{
-    list-style-type: none;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+.logo {
+    font-size: 28px;
+    color: #122835;
+    letter-spacing: 2px;
+}
+
+.navegacao ul {
+    list-style: none;
     display: flex;
-    width: 100%;
-    text-decoration: none;
+    gap: 60px;
+    align-items: center;
 }
 
-nav li{
-    margin: 0 15px;
-    text-align: justify;
-    font-size: larger;
+.navegacao a {
+    text-decoration: none;
+    color: #0d2c3f;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-nav a {
-    text-decoration: none;
+.navegacao a:hover {
+    color: #173348;
+}
+
+/* Botão de contato */
+.botao-contato {
+    background-color: #122835;
+    color: #ffffff;
     padding: 8px 16px;
-    display: block;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-contato:hover {
+    background-color: #173348;
 }
 
 /* Banner */
-.banner{
+.banner {
     margin: 0%;
     padding: 0%;
     align-items: center;
 }
 
-.container-banner{
+.container-banner {
     height: auto;
     margin: 0;
     padding: 0;
 }
 
-.container-banner img{
+.container-banner img {
     width: 100%;
     height: auto;
 }
@@ -90,7 +110,8 @@ nav a {
 
 .card-image {
     height: 50%;
-    background-color: #193849; /* Cor azul escura */
+    background-color: #193849;
+    /* Cor azul escura */
 }
 
 .card-content {
@@ -98,7 +119,7 @@ nav a {
     background-color: white;
 }
 
-.ver-todos{
+.ver-todos {
 
     text-align: right;
     padding-right: 115px;
@@ -124,7 +145,6 @@ nav a {
     display: flex;
     padding: 40px;
     margin: 0;
-    padding: 0;
     align-items: center;
 }
 
@@ -152,19 +172,20 @@ nav a {
 }
 
 /* parte mateus */
-.container-anuncie-seu-imovel{
+.container-anuncie-seu-imovel {
     padding-bottom: 5%;
 }
-.imagem-anuncio{
+
+.imagem-anuncio {
     position: flex;
-   position: left;
-   width: 70%;
-   margin-left: 3%;
-   
-        
+    position: left;
+    width: 70%;
+    margin-left: 3%;
+
+
 }
 
-.anuncio{
+.anuncio {
     position: relative;
     z-index: 1;
     width: 30%;
@@ -176,38 +197,51 @@ nav a {
     border-radius: 5px;
     background-color: #173348;
     color: #ffffff;
-    
+
 }
-.txtanuncio{
+
+.txtanuncio {
     color: #ffffff;
-    /*font-family:*/ 
+    /*font-family:*/
 }
 
 /* Estilo do fundo do pop-up */
 .modal {
-    display: none; /* Escondido por padrão */
-    position: fixed; /* Fica fixo na tela */
-    z-index: 1; /* Fica acima de outros elementos */
+    display: none;
+    /* Escondido por padrão */
+    position: fixed;
+    /* Fica fixo na tela */
+    z-index: 1;
+    /* Fica acima de outros elementos */
     left: 0;
     top: 0;
-    width: 100%; /* Largura total */
-    height: 100%; /* Altura total */
-    overflow: auto; /* Habilita rolagem se necessário */
-    background-color: rgb(0,0,0); /* Cor de fundo */
-    background-color: rgba(0,0,0,0.4); /* Fundo com opacidade */
+    width: 100%;
+    /* Largura total */
+    height: 100%;
+    /* Altura total */
+    overflow: auto;
+    /* Habilita rolagem se necessário */
+    background-color: rgb(0, 0, 0);
+    /* Cor de fundo */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fundo com opacidade */
 }
 
 /* Estilo do conteúdo do pop-up */
 .modal-content {
     background-color: #ffffff;
-    margin: 15% auto; /* Centraliza o pop-up */
+    margin: 15% auto;
+    /* Centraliza o pop-up */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Largura do pop-up */
-    max-width: 500px; /* Largura máxima */
-    border-radius: 5px; /* Bordas arredondadas */
+    width: 80%;
+    /* Largura do pop-up */
+    max-width: 500px;
+    /* Largura máxima */
+    border-radius: 5px;
+    /* Bordas arredondadas */
     text-align: center;
-    align-content: center ;
+    align-content: center;
 }
 
 .modal-title {
@@ -272,13 +306,13 @@ form {
     cursor: pointer;
 }
 
-.saiba-mais{
+.saiba-mais {
     background-color: #173348;
-    color:#ffffff;
+    color: #ffffff;
     width: 100px;
     height: 40px;
     border-radius: 20px;
-    border-color: #ffffff;   
+    border-color: #ffffff;
 }
 
 .botao-enviar {
@@ -290,7 +324,7 @@ form {
     height: 40px;
 }
 
-.rodape{
+.rodape {
     /* background-color: #173348; */
     position: flex;
     bottom: 0;
@@ -299,38 +333,41 @@ form {
     text-align: center;
 }
 
-.rodape-azul{
+.rodape-azul {
     display: grid;
     text-align: center;
     background-color: #173348;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
-    padding:2% ;
-}
-.coluna-rodape{
- color:#ffffff;
- text-decoration: none;
-
-}
-.coluna-rodape a{
- color: #ffffff;
- text-decoration: none;
- 
+    padding: 2%;
 }
 
-.coluna-rodape2{
-    border-style:solid;
+.coluna-rodape {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+.coluna-rodape a {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+.coluna-rodape2 {
+    border-style: solid;
     border-top: none;
     border-bottom: none;
     border-color: #ffffff;
 }
-.coluna-rodape2 a{
+
+.coluna-rodape2 a {
     color: #ffffff;
     text-decoration: none;
-    
-}   
 
-.coluna-rodape3{
+}
+
+.coluna-rodape3 {
     text-align: center;
     color: #ffffff;
 }
