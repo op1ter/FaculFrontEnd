@@ -15,6 +15,7 @@
 
 <body>
 
+    <!-- Cabeçalho com logotipo e menu de navegação -->
     <header class="menu-principal">
         <div class="logo">HABITA</div>
         <nav class="navegacao">
@@ -28,15 +29,18 @@
     </header>
 
     <main>
+        <!-- Seção do banner principal -->
         <section class="banner">
             <div class="container-banner">
                 <img src="Images/Banner.png" alt="Banner de imóveis em destaque">
             </div>
         </section>
 
+        <!-- Seção com os imóveis à venda -->
         <section id="imoveis" class="imoveis">
             <h2>Imóveis à venda</h2>
             <div class="container-imoveis">
+                <!-- Card 1 -->
                 <div class="card-imoveis">
                     <div class="card-image">
                         <img src="Images/imovel1.jpg" alt="Casa com 3 quartos e garagem" loading="lazy">
@@ -45,6 +49,7 @@
                         <p>Casa à venda - R$ 350.000</p>
                     </div>
                 </div>
+                <!-- Card 2 -->
                 <div class="card-imoveis">
                     <div class="card-image">
                         <img src="Images/imovel2.jpg" alt="Apartamento moderno com varanda" loading="lazy">
@@ -53,6 +58,7 @@
                         <p>Apartamento à venda - R$ 420.000</p>
                     </div>
                 </div>
+                <!-- Card 3 -->
                 <div class="card-imoveis">
                     <div class="card-image">
                         <img src="Images/imovel3.jpg" alt="Sobrado com área gourmet" loading="lazy">
@@ -62,11 +68,13 @@
                     </div>
                 </div>
             </div>
+            <!-- Botão para ver mais imóveis -->
             <div class="ver-todos">
                 <button class="botao-ver-todos" type="button">Ver todos ></button>
             </div>
         </section>
 
+        <!-- Seção sobre a empresa -->
         <section id="sobre-nos" class="sobre-nos">
             <div class="container-sobre-nos">
                 <img src="Images/Sobrenos.jpg" alt="Imagem de pessoas em reunião">
@@ -80,9 +88,11 @@
             </div>
         </section>
 
+        <!-- Seção de destaque para anunciar imóveis -->
         <section id="anuncie" class="anuncio-destaque">
+            <!-- Imagem de fundo -->
             <img src="Images/InteriorApartamento.JPG" alt="Sala com sofá e mesa de centro" class="imagem-fundo">
-
+            <!-- Card com botão de chamada -->
             <div class="card-anuncio">
                 <h2>Anuncie seu imóvel</h2>
                 <p>
@@ -94,14 +104,14 @@
                     Saiba Mais &gt;
                 </button>
             </div>
-
-            <div id="myModal" class="modal" role="dialog" aria-labelledby="modalTitle"
-                aria-describedby="modalDescription">
+            <!-- Modal com formulário para cadastro de imóvel -->
+            <div id="myModal" class="modal" role="dialog" aria-labelledby="modalTitle">
                 <div class="modal-content">
                     <span class="close" aria-label="Fechar">&times;</span>
                     <h2 id="modalTitle" class="modal-title">Cadastre seu imóvel</h2>
-
+                    <!-- Formulário de cadastro -->
                     <form id="propertyForm">
+                        <!-- Tipo, finalidade, endereço, etc -->
                         <fieldset>
                             <legend>Dados do Imóvel</legend>
 
@@ -160,6 +170,7 @@
                             </div>
                         </fieldset>
 
+                        <!-- Nome, telefone, email -->
                         <fieldset>
                             <legend>Seus Dados</legend>
 
@@ -170,12 +181,14 @@
 
                             <div class="single-input">
                                 <label for="telefone">Telefone</label>
-                                <input type="tel" id="telefone" maxlength="15" placeholder="Ex: (41) 00000-0000" required>
+                                <input type="tel" id="telefone" maxlength="15" placeholder="Ex: (41) 00000-0000"
+                                    required>
                             </div>
 
                             <div class="single-input">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" maxlength="25" placeholder="Ex: SeuEmail@email.com" required>
+                                <input type="email" id="email" maxlength="25" placeholder="Ex: SeuEmail@email.com"
+                                    required>
                             </div>
                         </fieldset>
 
@@ -188,9 +201,10 @@
 
 
     </main>
-
+    <!-- Rodapé com informações de contato -->
     <footer id="rodape" class="rodape">
         <div class="rodape-azul">
+            <!-- Colunas com endereços e navegação -->
             <div class="coluna-rodape">
                 <p><strong>Habita Imóveis</strong></p>
                 <p>Rua Tenente-Coronel Cardoso 114 - Centro, Curitiba/PR</p>
@@ -207,7 +221,7 @@
                 <p>Compra<br>Telefone: (41) 91234-4321<br>E-mail: compra@habita.com.br</p>
             </div>
         </div>
-
+        <!-- Ícones de redes sociais -->
         <div class="footer-social">
             <a href="#"><img src="Images/favicon/instagramicon.png" alt="Instagram"></a>
             <a href="#"><img src="Images/favicon/whatsappicon.png" alt="WhatsApp"></a>
