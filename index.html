@@ -23,16 +23,20 @@
                 <li><a href="#imoveis">Encontre seu imóvel</a></li>
                 <li><a href="#anuncie">Anuncie seu imóvel</a></li>
                 <li><a href="#sobre-nos">Sobre nós</a></li>
-                <button id="FUTUROpopup" class="botao-contato" aria-label="Entrar em contato com a empresa">Contato</button>
+                <li><button id="sei" class="botao-contato" aria-label="Entrar em contato com a empresa">Contato</button></li>
             </ul>
         </nav>
+        <!-- Botão Scroll To Top -->
+        <button class="ScrollTop" id="btnScrollTop">
+            <img src="Images/favicon/ImgScrollTop.png" alt="Voltar ao topo">
+        </button>
     </header>
 
     <main>
         <!-- Seção do banner principal -->
         <section class="banner">
             <div class="container-banner">
-                <img src="Images/Banner.png" alt="Banner de imóveis em destaque">
+                <img src="Images/banner.png" alt="Banner de imóveis em destaque">
             </div>
         </section>
 
@@ -41,35 +45,53 @@
             <h2>Imóveis à venda</h2>
             <div class="container-imoveis">
                 <!-- Card 1 -->
-                <div class="card-imoveis">
-                    <div class="card-image">
-                        <img src="Images/imovel1.jpg" alt="Casa com 3 quartos e garagem" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <p>Casa à venda - R$ 350.000</p>
+                <div class="card">
+                    <img src="Images/casaPiscina.jpg" alt="Imagem do imóvel">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            Casa em Condomínio com Piscina</h3>
+                        <div class="card-info">
+                            <span class="location">Curitiba - PR</span>
+                            <span class="code">Código: <span class="highlight">9635</span></span>
+                        </div>
+                        <div class="card-price">
+                            <span>Venda: </span><span class="highlight">R$ 5.500.000,00</span>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Card 2 -->
-                <div class="card-imoveis">
-                    <div class="card-image">
-                        <img src="Images/imovel2.jpg" alt="Apartamento moderno com varanda" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <p>Apartamento à venda - R$ 420.000</p>
+                <div class="card">
+                    <img src="Images/apartementoModerno.jpg" alt="Apartamento moderno com varanda" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Apartamento moderno com varanda</h3>
+                        <div class="card-info">
+                            <span class="location">São Paulo - SP</span>
+                            <span class="code">Código: <span class="highlight">2568</span></span>
+                        </div>
+                        <div class="card-price">
+                            <span>Apartamento à venda - </span><span class="highlight">R$ 2.420.000</span>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Card 3 -->
-                <div class="card-imoveis">
-                    <div class="card-image">
-                        <img src="Images/imovel3.jpg" alt="Sobrado com área gourmet" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <p>Sobrado à venda - R$ 550.000</p>
+                <div class="card">
+                    <img src="Images/sobradoGourmet.jpg" alt="Sobrado com área gourmet" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Sobrado com área gourmet</h3>
+                        <div class="card-info">
+                            <span class="location">Porto Alegre - RS</span>
+                            <span class="code">Código: <span class="highlight">1114</span></span>
+                        </div>
+                        <div class="card-price">
+                            <span>Sobrado à venda - </span><span class="highlight">R$ 3.550.000</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- Botão para ver mais imóveis -->
-            <div class="ver-todos">
+            <div id="openModal2" class="ver-todos">
                 <button class="botao-ver-todos" type="button">Ver todos ></button>
             </div>
         </section>
@@ -77,7 +99,7 @@
         <!-- Seção sobre a empresa -->
         <section id="sobre-nos" class="sobre-nos">
             <div class="container-sobre-nos">
-                <img src="Images/Sobrenos.jpg" alt="Imagem de pessoas em reunião">
+                <img src="Images/sobrenos.jpg" alt="Imagem de pessoas em reunião">
                 <div class="texto-sobre-nos">
                     <h2>Sobre nós</h2>
                     <p>Bem-vindo à Habita, sua parceira na busca pelo lar ideal. Somos uma imobiliária moderna e
@@ -91,7 +113,7 @@
         <!-- Seção de destaque para anunciar imóveis -->
         <section id="anuncie" class="anuncio-destaque">
             <!-- Imagem de fundo -->
-            <img src="Images/InteriorApartamento.JPG" alt="Sala com sofá e mesa de centro" class="imagem-fundo">
+            <img src="Images/interiorApartamento.JPG" alt="Sala com sofá e mesa de centro" class="imagem-fundo">
             <!-- Card com botão de chamada -->
             <div class="card-anuncio">
                 <h2>Anuncie seu imóvel</h2>
