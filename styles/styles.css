@@ -465,12 +465,7 @@ form legend {
         flex-direction: column;
         gap: 20px;
         width: 100%;
-        align-items: center;
-    }
-
-    .navegacao li {
-        width: 100%;
-        text-align: center;
+        align-items:start;
     }
 
     .navegacao a {
