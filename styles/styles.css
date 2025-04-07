@@ -10,6 +10,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .ScrollTop {
@@ -128,7 +129,7 @@ body {
 
 .container-imoveis {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px 0;
 }
@@ -430,8 +431,34 @@ form legend {
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
 
+    nav {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     .menu-principal {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        gap: 10px;
+    }
+
+    .menu-principal a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-principal button {
+        display: block;
+        width: auto;
+        max-width: 200px;
+        padding: 10px 20px;
+        margin-top: 10px;
     }
 
     .navegacao {
@@ -441,6 +468,11 @@ form legend {
     .container-imoveis {
         flex-direction: column;
         align-items: center;
+    }
+
+    .ver-todos {
+
+        text-align: left;
     }
 
     .container-sobre-nos {
@@ -470,8 +502,5 @@ form legend {
 
     .container-imoveis {
         padding: 0 15px;
-    }
-    .menu-principal {
-        padding: 10px 20px;
     }
 }
