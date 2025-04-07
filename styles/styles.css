@@ -194,7 +194,7 @@ body {
 .botao-ver-todos {
     margin-top: 25px;
     padding: 8px 20px;
-    border: 1px solid #2c4a5c;
+    border: 1px solid #173348;
     border-radius: 20px;
     background-color: transparent;
     font-size: 16px;
@@ -202,7 +202,7 @@ body {
 }
 
 .botao-ver-todos:hover {
-    background-color: #2c4a5c;
+    background-color: #173348;
     color: white;
 }
 
@@ -471,7 +471,6 @@ form legend {
     }
 
     .ver-todos {
-
         text-align: left;
     }
 
