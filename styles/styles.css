@@ -73,10 +73,6 @@ body {
     transition: color 0.3s ease;
 }
 
-.navegacao a:hover {
-    color: #173348;
-}
-
 /* Botão de contato header*/
 .botao-contato {
     display: inline-block;
@@ -442,7 +438,7 @@ form legend {
         align-items: center;
         justify-content: center;
         width: 100%;
-        padding: 10px 10px;
+        padding: 10px 20px;
         box-sizing: border-box;
         gap: 10px;
     }
@@ -465,6 +461,26 @@ form legend {
         font-size: 0.6rem;
     }
 
+    .navegacao ul {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .navegacao li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navegacao a {
+        font-size: 1rem;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+    
     .container-imoveis {
         flex-direction: column;
         align-items: center;
