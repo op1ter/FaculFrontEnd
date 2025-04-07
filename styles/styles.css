@@ -227,6 +227,10 @@ body {
 }
 
 /* ===== MODAL FORMULÁRIO DE CONTATO ===== */
+#myModal {
+    display: none;
+}
+
 .modal {
     display: block;
     position: fixed;
