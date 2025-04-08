@@ -53,8 +53,17 @@ function getRegistrosLocalStorage() {
   return registrosJSON ? JSON.parse(registrosJSON) : [];
 }
 
+function getRegistrosLocalStorageImovel() {
+  const registrosJSON = localStorage.getItem(registrosLocalStorageKey);
+  return registrosJSON ? JSON.parse(registrosJSON) : [];
+}
+
 function salvarRegistrosLocalStorage(registros) {
   localStorage.setItem(registrosLocalStorageKey, JSON.stringify(registros));
+}
+
+function salvarRegistrosLocalStorageImovel(registroImovel) {
+  localStorage.setItem(registrosLocalStorageKey, JSON.stringify(registroImovel));
 }
 
 function adicionarRegistro() {
@@ -98,9 +107,9 @@ function adicionarRegistroImovel() {
     return;
   }
 
-  const registros = getRegistrosLocalStorage();
+  const registroImovel = getRegistrosLocalStorage();
   registros.push({ tipo, finalidade, cep, endereco, numero, bairro, cidade, estado, descricao, nome, email, telefone });
-  salvarRegistrosLocalStorage(registros);
+  salvarRegistrosLocalStorageImovel(registroImovel);
 
   alert("Registro salvo com sucesso!");
 
