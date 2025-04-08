@@ -438,7 +438,21 @@ form legend {
     margin-top: 1%;
 }
 
-/* ===== RESPONSIVIDADE ===== */
+.tabelaRegistros {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 8px;
+    text-align: left;
+    background-color: #173348;
+  }
+
+  
+
+/* ===== RESPONSIVIDADE PAGINA HABITA ===== */
 @media (max-width: 768px) {
 
     nav {

@@ -9,7 +9,6 @@
     <title>Habita Imóveis</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="Images/favicon/favicon.ico">
-    <script src="Javascript/script.js"></script>
 
 </head>
 
@@ -23,7 +22,7 @@
                 <li><a href="#imoveis">Encontre seu imóvel</a></li>
                 <li><a href="#anuncie">Anuncie seu imóvel</a></li>
                 <li><a href="#sobre-nos">Sobre nós</a></li>
-                <li><button id="relatorio-dom" class="botao-relatorio" aria-label="Relatório de imoveis" onclick="window.location.href='/relatorio/relatorio.html';">Relatório</button></li>
+                <li><button id="relatorio-dom" class="botao-relatorio" aria-label="Relatório de imoveis" onclick="direcionarRelatorio()">Relatório</button></li>
             </ul>
         </nav>
     </header>
@@ -101,31 +100,27 @@
                         <span class="close2" aria-label="Fechar">&times;</span>
                         <h2 id="contatoModal" class="modal-title">Ver mais imóveis</h2>
 
-                        <form id="contactForm" onsubmit="mostrarMensagem(event)">
+                        <form id="contactForm">
 
                             <div class="single-input">
-                                <label for="nome">Nome</label>
-                                <input type="text" class="input" id="nome" maxlength="50" placeholder="Ex: Almir José"
-                                    required>
+                              <label for="nomeContato">Nome</label>
+                              <input type="text" class="input" id="nomeContato" maxlength="50" placeholder="Ex: Almir José" required>
                             </div>
-
+                      
                             <div class="single-input">
-                                <label for="email">Email</label>
-                                <input type="email" class="input" id="email" maxlength="25"
-                                    placeholder="Ex: SeuEmail@email.com" required>
-
+                              <label for="emailContato">Email</label>
+                              <input type="email" class="input" id="emailContato" maxlength="50" placeholder="Ex: SeuEmail@email.com"
+                                required>
+                      
                             </div>
-
+                      
                             <div class="single-input">
-                                <label for="tel">Telefone</label>
-                                <input type="tel" class="input" id="tel" maxlength="15"
-                                    placeholder="Ex: (41) 00000-0000" required>
-
+                              <label for="telefoneContato">Telefone</label>
+                              <input type="tel" class="input" id="telefoneContato" maxlength="15" placeholder="Ex: (41) 00000-0000" required>
+                      
                             </div>
-
-                            <button type="submit" class="botao-enviar">Enviar</button>
-
-                        </form>
+                      
+                            <button type="button" class="botao-enviar" onclick="adicionarRegistro()">Enviar</button>
                     </div>
 
                 </div>
@@ -250,7 +245,7 @@
                             </div>
                         </fieldset>
 
-                        <button type="submit" class="botao-enviar">Enviar</button>
+                        <button type="button" class="botao-enviar" onclick="adicionarRegistroImovel()">Enviar</button>
                     </form>
                 </div>
             </div>
@@ -286,6 +281,8 @@
             <a href="#"><img src="Images/favicon/linkedinicon.png" alt="LinkedIn"></a>
         </div>
     </footer>
+
+    <script src="Javascript/script.js"></script>
 </body>
 
 </html>
