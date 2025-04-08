@@ -79,6 +79,46 @@ function adicionarRegistro() {
   document.getElementById("telefoneContato").value = "";
 }
 
+function adicionarRegistroImovel() {
+  const tipo = document.getElementById("tipo").value.trim();
+  const finalidade = document.getElementById("finalidade").value.trim();
+  const cep = document.getElementById("cep").value.trim();
+  const endereco = document.getElementById("endereco").value.trim();
+  const numero = document.getElementById("numero").value.trim();
+  const bairro = document.getElementById("bairro").value.trim();
+  const cidade = document.getElementById("cidade").value.trim();
+  const estado = document.getElementById("estato").value.trim();
+  const descricao = document.getElementById("descricao").value.trim();
+  const nome = document.getElementById("nome").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const telefone = document.getElementById("telefone").value.trim();
+
+  if (!nome || !email || !telefone) {
+    alert("Preencha todos os campos!");
+    return;
+  }
+
+  const registros = getRegistrosLocalStorage();
+  registros.push({ tipo, finalidade, cep, endereco, numero, bairro, cidade, estado, descricao, nome, email, telefone });
+  salvarRegistrosLocalStorage(registros);
+
+  alert("Registro salvo com sucesso!");
+
+  // Limpa os campos
+  document.getElementById("tipo").value = "";
+  document.getElementById("finalidade").value = "";
+  document.getElementById("cep").value = "";
+  document.getElementById("endereco").value = "";
+  document.getElementById("numero").value = "";
+  document.getElementById("bairro").value = "";
+  document.getElementById("cidade").value = "";
+  document.getElementById("estado").value = "";
+  document.getElementById("descricao").value = "";
+  document.getElementById("nome").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("telefone").value = "";
+}
+
 // ============================
 // SCRIPT PARA relatorio.html
 // ============================
