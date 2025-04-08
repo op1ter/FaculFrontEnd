@@ -23,7 +23,8 @@
                 <li><a href="#imoveis">Encontre seu imóvel</a></li>
                 <li><a href="#anuncie">Anuncie seu imóvel</a></li>
                 <li><a href="#sobre-nos">Sobre nós</a></li>
-                <li><button id="sei" class="botao-contato" aria-label="Entrar em contato com a empresa">Contato</button></li>
+                <li><button id="relatorio-dom" class="botao-relatorio"
+                        aria-label="Relatório de imoveis">Relatório</button></li>
             </ul>
         </nav>
     </header>
@@ -33,7 +34,7 @@
         <button class="ScrollTop" id="btnScrollTop">
             <img src="Images/favicon/ImgScrollTop.png" alt="Voltar ao topo">
         </button>
-        
+
         <!-- Seção do banner principal -->
         <section class="banner">
             <div class="container-banner">
@@ -93,7 +94,42 @@
             </div>
             <!-- Botão para ver mais imóveis -->
             <div id="openModal2" class="ver-todos">
-                <button class="botao-ver-todos" type="button">Ver todos ></button>
+                <button id="sei" class="botao-ver-todos" type="button">Ver todos ></button>
+
+                <div id="modal-contato" class="modal-contato" role="dialog" aria-labelledby="contatoModal"
+                    aria-describedby="modalDescript">
+                    <div class="modal-content">
+                        <span class="close2" aria-label="Fechar">&times;</span>
+                        <h2 id="contatoModal" class="modal-title">Ver mais imóveis</h2>
+
+                        <form id="contactForm" onsubmit="mostrarMensagem(event)">
+
+                            <div class="single-input">
+                                <label for="nome">Nome</label>
+                                <input type="text" class="input" id="nome" maxlength="50" placeholder="Ex: Almir José"
+                                    required>
+                            </div>
+
+                            <div class="single-input">
+                                <label for="email">Email</label>
+                                <input type="email" class="input" id="email" maxlength="25"
+                                    placeholder="Ex: SeuEmail@email.com" required>
+
+                            </div>
+
+                            <div class="single-input">
+                                <label for="tel">Telefone</label>
+                                <input type="tel" class="input" id="tel" maxlength="15"
+                                    placeholder="Ex: (41) 00000-0000" required>
+
+                            </div>
+
+                            <button type="submit" class="botao-enviar">Enviar</button>
+
+                        </form>
+                    </div>
+
+                </div>
             </div>
         </section>
 

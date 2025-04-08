@@ -76,11 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  const form2 = document.getElementById("propertyForm2");
-  if (form2) {
-    form2.addEventListener("submit", handleFormSubmit);
-  }
-
+  // Botão para subir topo da pagina
   const scrollBtn = document.getElementById("btnScrollTop");
 
   // Mostra/esconde o botão ao rolar a página
@@ -95,4 +91,51 @@ document.addEventListener("DOMContentLoaded", function () {
       behavior: "smooth"
     });
   });
+
+  //BOTÁO VER TODOS
+
+  // Obtém o modal
+  var modalContact = document.getElementById("modal-contato");
+  // Obtém o botão que abre o modal
+  var btnContact = document.getElementById("sei");
+  // Obtém o elemento <span> que fecha o modal
+  var spanContact = document.getElementsByClassName("close2")[0];
+  // Quando o usuário clica no botão, abre o modal
+  // Função para abrir o modal
+  function openModal2() {
+    modalContact.style.display = "block";
+  }
+
+  // Função para fechar o modal
+  function closeModal2() {
+    modalContact.style.display = "none";
+  }
+
+  // Lida com o envio do formulário
+  function handleFormSubmit2(event) {
+    event.preventDefault(); // impede o recarregamento da página
+    alert("Formulário enviado com sucesso! Entraremos em contato em breve.");
+    event.target.reset(); // limpa os campos do formulário
+    closeModal2(); // fecha o modal
+  }
+
+  // Adiciona os event listeners somente se os elementos existirem
+  if (modalContact && btnContact && spanContact) {
+    btnContact.addEventListener("click", openModal2);
+    spanContact.addEventListener("click", closeModal2);
+
+    // Fecha o modal se o usuário clicar fora da área do conteúdo
+    window.addEventListener("click", function (event) {
+      if (event.target === modalContact) {
+        closeModal2();
+      }
+    });
+  }
+
+  // Evento de envio do formulário
+  const form2 = document.getElementById("contactForm");
+  if (form2) {
+    form2.addEventListener("submit", handleFormSubmit2);
+  }
+  //ENCERRA
 });
