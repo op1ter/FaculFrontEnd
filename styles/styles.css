@@ -438,19 +438,59 @@ form legend {
     margin-top: 1%;
 }
 
-.tabelaRegistros {
-    border-collapse: collapse;
+.tabela-wrapper {
+    overflow-x: auto;
     width: 100%;
   }
-  th, td {
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    padding: 8px;
-    text-align: left;
-    background-color: #173348;
+
+.tabelaRegistros {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    /* evita colapso da tabela em telas pequenas */
+}
+
+.botao-editar, .botao-excluir {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botao-editar {
+    background-color: #2563eb; /* azul */
+    color: white;
+  }
+  
+  .botao-editar:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .botao-excluir {
+    background-color: #dc2626; /* vermelho */
+    color: white;
+  }
+  
+  .botao-excluir:hover {
+    background-color: #b91c1c;
   }
 
-  
+table thead {
+    background-color: #173348;
+    color: white;
+}
+
+table td,
+table th {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    word-break: break-word;
+}
+
 
 /* ===== RESPONSIVIDADE PAGINA HABITA ===== */
 @media (max-width: 768px) {

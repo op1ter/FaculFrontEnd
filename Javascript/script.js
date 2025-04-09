@@ -14,7 +14,7 @@ let linhaEditando = null; // ← PRIMEIRO
 
 // Obtém o modal
 let modalContact = document.getElementById("modal-contato");
-let btnContact = document.getElementById("sei");
+let btnContact = document.getElementById("btnVerTodos");
 let spanContact = document.getElementsByClassName("close2")[0];
 
 // Função para abrir o modal
@@ -53,17 +53,8 @@ function getRegistrosLocalStorage() {
   return registrosJSON ? JSON.parse(registrosJSON) : [];
 }
 
-function getRegistrosLocalStorageImovel() {
-  const registrosJSON = localStorage.getItem(registrosLocalStorageKey);
-  return registrosJSON ? JSON.parse(registrosJSON) : [];
-}
-
 function salvarRegistrosLocalStorage(registros) {
   localStorage.setItem(registrosLocalStorageKey, JSON.stringify(registros));
-}
-
-function salvarRegistrosLocalStorageImovel(registroImovel) {
-  localStorage.setItem(registrosLocalStorageKey, JSON.stringify(registroImovel));
 }
 
 function adicionarRegistro() {
@@ -88,45 +79,6 @@ function adicionarRegistro() {
   document.getElementById("telefoneContato").value = "";
 }
 
-function adicionarRegistroImovel() {
-  const tipo = document.getElementById("tipo").value.trim();
-  const finalidade = document.getElementById("finalidade").value.trim();
-  const cep = document.getElementById("cep").value.trim();
-  const endereco = document.getElementById("endereco").value.trim();
-  const numero = document.getElementById("numero").value.trim();
-  const bairro = document.getElementById("bairro").value.trim();
-  const cidade = document.getElementById("cidade").value.trim();
-  const estado = document.getElementById("estato").value.trim();
-  const descricao = document.getElementById("descricao").value.trim();
-  const nome = document.getElementById("nome").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const telefone = document.getElementById("telefone").value.trim();
-
-  if (!nome || !email || !telefone) {
-    alert("Preencha todos os campos!");
-    return;
-  }
-
-  const registroImovel = getRegistrosLocalStorage();
-  registros.push({ tipo, finalidade, cep, endereco, numero, bairro, cidade, estado, descricao, nome, email, telefone });
-  salvarRegistrosLocalStorageImovel(registroImovel);
-
-  alert("Registro salvo com sucesso!");
-
-  // Limpa os campos
-  document.getElementById("tipo").value = "";
-  document.getElementById("finalidade").value = "";
-  document.getElementById("cep").value = "";
-  document.getElementById("endereco").value = "";
-  document.getElementById("numero").value = "";
-  document.getElementById("bairro").value = "";
-  document.getElementById("cidade").value = "";
-  document.getElementById("estado").value = "";
-  document.getElementById("descricao").value = "";
-  document.getElementById("nome").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("telefone").value = "";
-}
 
 // ============================
 // SCRIPT PARA relatorio.html
@@ -145,8 +97,8 @@ function carregarTabela() {
       <td>${registro.email}</td>
       <td>${registro.telefone}</td>
       <td>
-        <button onclick="editarRegistro(${index})">Editar</button>
-        <button onclick="excluirRegistro(${index})">Excluir</button>
+        <button class="botao-editar" onclick="editarRegistro(${index})">Editar</button>
+        <button class="botao-excluir" onclick="excluirRegistro(${index})">Excluir</button>
       </td>
     `;
 
@@ -182,10 +134,6 @@ function excluirRegistro(index) {
   }
 }
 
-if (window.location.pathname.includes("relatorio.html")) {
-  window.onload = carregarTabela;
-}
-
 // ---------------------------------------------------------------------
 // Referências aos elementos do modal
 let modal = document.getElementById("myModal");
@@ -215,9 +163,125 @@ if (modal && openButton && closeButton) {
   });
 }
 
+// ============================
+// FORMULÁRIO DE IMÓVEIS - index.html
+// ============================
 
+const registrosImoveisKey = 'registrosImoveis';
 
+function getRegistrosImoveisLocalStorage() {
+  const registrosJSON = localStorage.getItem(registrosImoveisKey);
+  return registrosJSON ? JSON.parse(registrosJSON) : [];
+}
 
+function salvarRegistrosImoveisLocalStorage(registros) {
+  localStorage.setItem(registrosImoveisKey, JSON.stringify(registros));
+}
+
+function adicionarRegistroImovel() {
+  const tipo = document.getElementById("tipo").value;
+  const finalidade = document.getElementById("finalidade").value;
+  const cep = document.getElementById("cep").value.trim();
+  const endereco = document.getElementById("endereco").value.trim();
+  const numero = document.getElementById("numero").value.trim();
+  const bairro = document.getElementById("bairro").value.trim();
+  const cidade = document.getElementById("cidade").value.trim();
+  const estado = document.getElementById("estado").value.trim();
+  const descricao = document.getElementById("descricao").value.trim();
+  const nome = document.getElementById("nome").value.trim();
+  const telefone = document.getElementById("telefone").value.trim();
+  const email = document.getElementById("email").value.trim();
+
+  if (!tipo || !finalidade || !cep || !endereco || !numero || !bairro || !cidade || !estado || !descricao || !nome || !telefone || !email) {
+    alert("Preencha todos os campos!");
+    return;
+  }
+
+  const registros = getRegistrosImoveisLocalStorage();
+
+  registros.push({ tipo, finalidade, cep, endereco, numero, bairro, cidade, estado, descricao, nome, telefone, email });
+  salvarRegistrosImoveisLocalStorage(registros);
+  alert("Imóvel registrado com sucesso!");
+
+  // Limpa os campos
+  document.getElementById("tipo").value = "";
+  document.getElementById("finalidade").value = "";
+  document.getElementById("cep").value = "";
+  document.getElementById("endereco").value = "";
+  document.getElementById("numero").value = "";
+  document.getElementById("bairro").value = "";
+  document.getElementById("cidade").value = "";
+  document.getElementById("estado").value = "";
+  document.getElementById("descricao").value = "";
+  document.getElementById("nome").value = "";
+  document.getElementById("telefone").value = "";
+  document.getElementById("email").value = "";
+}
+
+// ============================
+// SCRIPT PARA relatorio.html
+// ============================
+
+function carregarTabelaImoveis() {
+  const registros = getRegistrosImoveisLocalStorage();
+  const corpoTabela = document.querySelector("#tabelaRegistrosImoveis tbody");
+  corpoTabela.innerHTML = "";
+
+  registros.forEach((registro, index) => {
+    const linha = document.createElement("tr");
+
+    linha.innerHTML = `
+      <td>${registro.tipo}</td>
+      <td>${registro.finalidade}</td>
+      <td>${registro.endereco}, ${registro.numero} - ${registro.bairro}, ${registro.cidade} - ${registro.estado}</td>
+      <td>${registro.descricao}</td>
+      <td>${registro.nome}</td>
+      <td>${registro.telefone}</td>
+      <td>${registro.email}</td>
+      <td>
+        <button class="botao-editar" onclick="editarRegistroImovel(${index})">Editar</button>
+        <button class="botao-excluir" onclick="excluirRegistroImovel(${index})">Excluir</button>
+      </td>
+    `;
+
+    corpoTabela.appendChild(linha);
+  });
+}
+
+function editarRegistroImovel(index) {
+  const registros = getRegistrosImoveisLocalStorage();
+  const registroNovo = registros[index];
+
+  const novoDescricao = prompt("Editar descrição:", registroNovo.descricao);
+  const novoPropietario = prompt("Editar Proprietario:", registroNovo.nome);
+  const novoTelefone = prompt("Editar telefone:", registroNovo.telefone);
+  const novoEmail = prompt("Editar email:", registroNovo.email);
+
+  if (novoDescricao && novoPropietario && novoTelefone && novoEmail) {
+    registros[index].descricao = novoDescricao;
+    registros[index].nome = novoPropietario;
+    registros[index].telefone = novoTelefone;
+    registros[index].email = novoEmail;
+    salvarRegistrosImoveisLocalStorage(registros);
+    carregarTabelaImoveis();
+  }
+}
+
+function excluirRegistroImovel(index) {
+  if (confirm("Deseja excluir este registro de imóvel?")) {
+    const registros = getRegistrosImoveisLocalStorage();
+    registros.splice(index, 1);
+    salvarRegistrosImoveisLocalStorage(registros);
+    carregarTabelaImoveis();
+  }
+}
+
+if (window.location.pathname.includes("relatorio.html")) {
+  window.onload = function () {
+    carregarTabela();
+    carregarTabelaImoveis();
+  };
+}
 
 // Preenchimento automático de endereço com base no CEP digitado
 document.getElementById("cep").addEventListener("blur", async () => {
